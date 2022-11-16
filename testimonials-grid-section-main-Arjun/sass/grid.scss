@@ -1,0 +1,128 @@
+$Moderate-violet: hsl(263, 55%, 52%);
+$Very-dark-grayish-blue: hsl(217, 19%, 35%);
+$Very-dark-blackish-blue: hsl(219, 29%, 14%);
+$White: hsl(0, 0%, 100%);
+$color-bl: hsl(228, 45%, 44%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.container {
+    max-width: 1116px;
+    font-size: 13px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    display: grid;
+    gap: 24px;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+.bio {
+    display: flex;
+    align-items: center;
+
+    &__img {
+        width: 35px;
+        height: 35px;
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+
+    &__title {
+        padding: 1rem;
+    }
+}
+.mar-top {
+    margin-top: 10px;
+}
+.br-10 {
+    border-radius: 10px;
+}
+.border {
+    border: 3px solid hsl(228, 45%, 44%);
+}
+
+.opacity {
+    opacity: 50%;
+}
+.opacity-1 {
+    opacity: 10;
+}
+
+.review-1 {
+    background-color: $Moderate-violet;
+    color: $White;
+    padding: 1rem;
+    position: relative;
+
+    @media (min-width: 768px) {
+        grid-column: 1 / span 2;
+    }
+}
+.quotation {
+    position: absolute;
+    top: 0;
+    right: 77px;
+    z-index: 2;
+}
+
+.z-10 {
+    z-index: 10;
+}
+.relative {
+    position: relative;
+}
+.review-2 {
+    color: $White;
+    padding: 1rem;
+    background-color: $Very-dark-grayish-blue;
+}
+.review-3 {
+    color: rgb(26, 25, 25);
+    padding: 1rem;
+    background-color: rgb(245, 239, 239);
+}
+.review-4 {
+    color: $White;
+    padding: 1rem;
+    background-color: $Very-dark-blackish-blue;
+
+    @media (min-width: 768px) {
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 1;
+    }
+}
+.review-5 {
+    color: rgb(26, 25, 25);
+    background-color: rgb(245, 239, 239);
+    padding: 1rem;
+
+    @media (min-width: 768px) {
+        grid-column: 4 / span 1;
+        grid-row: 1 / span 2;
+    }
+}
+.space {
+    display: inline-block;
+    max-width: 1112px;
+    min-height: 78px;
+    background-color: rgb(245, 239, 239);
+    width: 100%;
+    background-size: cover;
+
+    position: relative;
+    margin-top: 1rem;
+    border-radius: 2px;
+}
